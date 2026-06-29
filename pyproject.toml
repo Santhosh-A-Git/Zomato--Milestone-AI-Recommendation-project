@@ -1,0 +1,23 @@
+[project]
+name = "zomato-recommendation-system"
+version = "0.1.0"
+description = "AI-Powered Restaurant Recommendation System (Zomato Use Case)"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0.0",
+    "datasets>=2.14.0",
+    "groq>=0.4.0",
+    "streamlit>=1.30.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "pyarrow>=14.0.0",
+    "fastparquet>=2023.10.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "ruff>=0.1.0"
+]
