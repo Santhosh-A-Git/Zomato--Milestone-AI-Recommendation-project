@@ -1,9 +1,9 @@
 // Detect if we are running on localhost, otherwise use the production backend URL
 const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 // NOTE: Replace the production URL below with your actual Railway URL once deployed!
-const API_BASE_URL = isLocal 
-    ? "http://localhost:8000/api" 
-    : "https://<YOUR_RAILWAY_URL_HERE>/api";
+const API_BASE_URL = isLocal
+    ? "http://localhost:8000/api"
+    : "https://web-production-ac201.up.railway.app/api";
 
 export async function fetchLocations() {
     try {
@@ -35,7 +35,7 @@ export async function fetchRecommendations(preferences) {
         },
         body: JSON.stringify(preferences)
     });
-    
+
     if (!res.ok) {
         throw new Error("Failed to generate recommendations");
     }
