@@ -1,4 +1,9 @@
-const API_BASE_URL = "http://localhost:8000/api";
+// Detect if we are running on localhost, otherwise use the production backend URL
+const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+// NOTE: Replace the production URL below with your actual Railway URL once deployed!
+const API_BASE_URL = isLocal 
+    ? "http://localhost:8000/api" 
+    : "https://<YOUR_RAILWAY_URL_HERE>/api";
 
 export async function fetchLocations() {
     try {
